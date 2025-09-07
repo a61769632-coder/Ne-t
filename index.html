@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Next Clan Web App</title>
+  <!-- Optional: set API base when static is hosted on a different domain -->
+  <!-- Example for dev: <meta name="api-base" content="https://abc123.ngrok.io"> -->
+  <!-- Use relative path so it works both via file:// and http://localhost -->
+  <link rel="stylesheet" href="static/styles.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Клан Next — Web App</h1>
+      <p class="subtitle">Мини-приложение Telegram</p>
+    </header>
+
+    <section class="card">
+      <h2>Ваш профиль</h2>
+      <div id="user-info">
+        <p>Загрузка...</p>
+      </div>
+      <div id="dev-uid-box" class="row" style="display:none; margin-top:10px;">
+        <input id="dev-uid-input" type="number" placeholder="Введите Telegram ID" style="padding:8px;border-radius:8px;border:1px solid #1f2228;background:#0e0f12;color:#e8e8e8;">
+        <button id="dev-uid-apply" style="margin-left:8px;">Установить UID</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Меню</h2>
+      <div id="menu" class="menu"></div>
+    </section>
+
+    <section class="card">
+      <h2>Действия</h2>
+      <div class="actions">
+        <button id="btn-status">Запросить статус из бота</button>
+        <button id="btn-send">Отправить данные в бота</button>
+      </div>
+      <div id="result" class="result"></div>
+    </section>
+
+    <footer>
+      <a href="/health" target="_blank">Проверка сервера</a>
+    </footer>
+  </div>
+  <script src="static/main.js"></script>
+</body>
+</html>
